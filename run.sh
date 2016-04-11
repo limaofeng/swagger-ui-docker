@@ -16,4 +16,7 @@ else
   sed -i "s|http://example.com/api|$API_URL|g" index.html
 fi
 
+sed -i "s|<!-- <script src='lang/translator.js' type='text/javascript'></script> -->|<script src='lang/translator.js' type='text/javascript'></script>|g" index.html
+sed -i "s|<!-- <script src='lang/en.js' type='text/javascript'></script> -->|<script src='lang/zh-cn.js' type='text/javascript'></script>|g" index.html
+
 http-server -p 80
